@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Alert from './Alert.jsx';
 
 const Formulario = () => {
     const [nombre, setNombre] = useState('');
@@ -32,10 +33,10 @@ const Formulario = () => {
     return (
     <>
         <form className="formulario" onSubmit={validarDatos}>
-        {error === 4 ? <p>Registro Exitoso</p> : null}
-        {error === 1 ? <p>Campos vacios</p> : null}
-        {error === 2 ? <p>Contraseñas no coinciden</p> : null}
-        {error === 3 ? <p>Email formato incorrecto</p> : null}
+        {error === 4 ? <Alert color='bg-success' text='Registro Exitoso'></Alert> : null}
+        {error === 1 ? <Alert color='bg-danger' text='Debe rellenar todos los campos'></Alert> : null}
+        {error === 2 ? <Alert color='bg-danger' text='Las contraseñas no coinciden'></Alert> : null}
+        {error === 3 ? <Alert color='bg-danger' text='Debe ingresar un mail válido'></Alert> : null}
         <div className="form-group">
         <label>Nombre</label>
         <input
