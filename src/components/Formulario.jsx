@@ -33,10 +33,6 @@ const Formulario = () => {
     return (
     <>
         <form className="formulario" onSubmit={validarDatos}>
-        {error === 4 ? <Alert color='bg-success' text='Registro Exitoso'></Alert> : null}
-        {error === 1 ? <Alert color='bg-danger' text='Debe rellenar todos los campos'></Alert> : null}
-        {error === 2 ? <Alert color='bg-danger' text='Las contraseñas no coinciden'></Alert> : null}
-        {error === 3 ? <Alert color='bg-danger' text='Debe ingresar un mail válido'></Alert> : null}
         <div className="form-group">
         <label>Nombre</label>
         <input
@@ -78,12 +74,13 @@ const Formulario = () => {
         />
         </div>
         <button type="submit" className="btn btn-primary">
-        Enviar
+        Registrarse
         </button>
+        {error === 4 ? <Alert color='bg-success' text='Registro Exitoso'></Alert> : null}
+        {error === 1 ? <Alert color='bg-danger' text='Debe rellenar todos los campos'></Alert> : null}
+        {error === 2 ? <Alert color='bg-danger' text='Las contraseñas no coinciden'></Alert> : null}
+        {error === 3 ? <Alert color='bg-danger' text='Debe ingresar un mail válido'></Alert> : null}
         </form>
-        <h1>Datos ingresados</h1>
-        {nombre} - {email} - {contrasena} - {confirmacion}
-
     </>
     );
 };

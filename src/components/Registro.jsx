@@ -5,10 +5,16 @@ function Registro() {
 
     return (
       <>
-      <SocialButton socialMedia="facebook" link="https://www.facebook.com"></SocialButton>
-      <SocialButton socialMedia="github" link="https://github.com/sergiorioseco"></SocialButton>
-      <SocialButton socialMedia="linkedin" link="https://www.linkedin.com/in/sergio-rioseco-carrasco-801947224/"></SocialButton>
+      <div className='mainSection p-5'>
+      <h1>Crea una cuenta</h1>
+      <div className='socialButtons fs-1'>
+      <SocialButton socialMedia="facebook" link="#"></SocialButton>
+      <SocialButton socialMedia="github" link="#"></SocialButton>
+      <SocialButton socialMedia="linkedin" link="#"></SocialButton>
+      </div>
+      <p><b>O usa tu email para registrarte</b></p>
       <Formulario></Formulario>
+      </div>
       </>
     )
   }

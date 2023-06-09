@@ -29,6 +29,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-image: linear-gradient(#a3d158, #F6EAC2);
 }
 
 h1 {
@@ -70,4 +71,24 @@ button:focus-visible {
 
 .alert{
   color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mainSection{
+  display: flex;
+  flex-direction: column;
+  border: solid 1px;
+  border-radius: 5%;
+  background-color: #FBFBFD;
+}
+
+.socialButtons{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
